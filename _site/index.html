@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>甜脆的小作品</title>
+    <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css"/>
+    <style>
+        .content p {
+            text-indent: 2rem;
+        }
+        .content a, .content a:visited {
+            color: black;
+        }
+        .content a:hover {
+            color: hsla(201, 100%, 42%, 1);
+        }
+        .ui.accordion {
+            margin: 1rem auto;
+        }
+    </style>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui styled accordion">
+            <div class="title">
+                <i class="dropdown icon"></i>
+                动感计算器
+            </div>
+            <div class="content">
+                <div class="transition hidden">
+                    <p>一个性感的播放器</p>
+                    <p><a href="works/动感计算器/calculator1.html">版本1</a></p>
+                    <p><a href="works/动感计算器/calculator2.html">版本2</a></p>
+                </div>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                购物商城网站
+            </div>
+            <div class="content">
+                <div class="transition hidden">
+                    <p><a href="works/购物商城网站/index.html">点击我</a></p>
+                </div>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                分布式用户注册表单
+            </div>
+            <div class="content">
+                <div class="transition hidden">
+                    <p><a href="works/分步式用户注册表单/index.html">点击我</a></p>
+                </div>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                侧边栏菜单
+            </div>
+            <div class="content">
+                <div class="transition hidden">
+                    <p><a href="works/SidebarMenu/index.html">点击我</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        "use strict";
+        $('.ui.accordion').accordion();
+    </script>
+</body>
+</html>

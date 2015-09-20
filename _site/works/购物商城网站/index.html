@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>购物商城网站</title>
+    <link rel="stylesheet" href="../../bower_components/semantic-ui/dist/semantic.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <style>
+        .ui.secondary.menu {
+            min-height: 3.875rem;
+        }
+
+        .ui.secondary.menu .item:first-child {
+            margin-left: 2rem;
+        }
+
+        .ui.checkbox > label {
+            color: hsl(226, 6%, 43%);
+            font-size: 14px;
+        }
+    </style>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/semantic-ui/dist/semantic.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="ui secondary menu">
+        <a class="item">HOME</a>
+        <a class="item">BRANDS</a>
+        <a class="item">DESIGNERS</a>
+        <a class="item">CONTACT</a>
+    </div>
+    <main>
+        <aside>
+            <div class="category">
+                <p><span class="class-title">CART</span><i class="big in cart icon"></i></p>
+
+                <p class="cart-info">No items in cart.</p>
+            </div>
+            <div class="category">
+                <p><span class="class-title">CATEGORIES</span></p>
+
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>New Arivals</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Accesories</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Bags</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Dressed</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Jackets</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Jewelry</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Shoes</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Shirts</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>Sweaters</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="cloth_class"/>
+                        <label>T-shirts</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <p><span class="class-title">COLORS</span></p>
+
+                <div class="row">
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-beige"></button>
+                        <span>Beige</span>
+                    </div>
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-gery"></button>
+                        <span>Gery</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-black"></button>
+                        <span>Black</span>
+                    </div>
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-orange"></button>
+                        <span>Orange</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-blue"></button>
+                        <span>Blue</span>
+                    </div>
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-purple"></button>
+                        <span>Purple</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-brown"></button>
+                        <span>Brown</span>
+                    </div>
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-red"></button>
+                        <span>Red</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-green"></button>
+                        <span>Green</span>
+                    </div>
+                    <div class="column">
+                        <button class="mini circular ui icon button tc-white"></button>
+                        <span>White</span>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <p><span class="class-title">SIZES</span></p>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input name="cloth_size" type="checkbox">
+                            <label>XS</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="cloth_size"/>
+                            <label for="">L</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input name="cloth_size" type="checkbox">
+                            <label>X</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="cloth_size"/>
+                            <label for="">XL</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input name="cloth_size" type="checkbox">
+                            <label>M</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="cloth_size"/>
+                            <label for="">XXL</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <p><span class="class-title">PRICE RANGE</span></p>
+
+                <div class="row">
+                    <div id="price-bar">
+                        <div class="slider" id="slider1">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="slider" id="slider2">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-page">
+            <p class="text">Showing 1–9 of 48 results</p>
+
+            <div class="row">
+                <div class="card">
+                    <div class="model">
+                        <img src="images/1.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/2.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">PLEAT PRINTED DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/3.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/4.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="model">
+                        <img src="images/5.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/6.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">PLEAT PRINTED DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/7.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="model">
+                        <img src="images/8.jpg" alt=""/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-row">
+                            <p>
+                                <span class="product-name">FLUTED HEM DRESS</span>
+                                <span class="product-price">$39</span>
+                            </p>
+
+                            <p class="text">Summer dress</p>
+                        </div>
+                        <div class="product-row">
+                            <strong>SIZES</strong>
+                            <span class="text">XS,S,M,L,XL,XXL</span>
+                        </div>
+                        <div class="product-row">
+                            <strong>COLORS</strong>
+
+                            <div class="product-colors">
+                                <button class="mini circular ui icon button tc-blue"></button>
+                                <button class="mini circular ui icon button tc-red"></button>
+                                <button class="mini circular ui icon button tc-white"></button>
+                                <button class="mini circular ui icon button tc-green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

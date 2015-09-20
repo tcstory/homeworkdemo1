@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>分步式用户注册表单UI界面设计 </title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: linear-gradient(hsla(112, 100%, 38%, 0.2), hsla(283, 93%, 49%, 0.2)), url("./images/gs.png");
+            height: 100%;
+        }
+        #content {
+            width: 20rem;
+            margin: 4rem auto 0;
+        }
+        .page {
+            width: 20rem;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px 1px hsla(0, 0%, 0%, 0.4);
+            border-radius: .25rem;
+            padding-top: 1rem;
+            padding-bottom: 1.25rem;
+            visibility: hidden;
+            transform: scale(0.6);
+            transition: all 450ms ease 200ms;
+            position: absolute;
+        }
+        .row {
+            margin: .5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+        }
+        .row:nth-of-type(1) h2 {
+            color: hsl(210, 29%, 24%);
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 0.625rem;
+        }
+
+        .row:nth-of-type(1) h3 {
+            font-weight: normal;
+            font-size: 13px;
+            color: hsl(0, 0%, 40%);
+            margin-bottom: 1.25rem;
+        }
+        .row:last-child {
+            margin-top: 1rem;;
+        }
+        input {
+            padding: .8rem;
+            width: 100%;
+            font-size: 0.8125rem;
+            border-radius: .25rem;
+            border: 1px solid hsl(0, 0%, 80%);
+        }
+        textarea {
+            color: hsl(210, 29%, 24%);
+            font-size: 13px;
+            width: 100%;
+            border-radius: .25rem;
+            border: 1px solid hsl(0, 0%, 80%);
+            padding: .8rem
+        }
+        .btn {
+            background-color: hsl(145, 63%, 42%);
+            width: 5rem;
+            height: 2.5rem;
+            border: none;
+            font-size: 0.8125rem;
+            font-weight: bold;
+            color: hsl(0, 0%, 100%);
+            cursor: pointer;
+        }
+        .active {
+            transform: scale(1);
+            /*display: block;*/
+            /*z-index: 1;*/
+            visibility: visible;
+            /*transition: all 2250ms ease;*/
+        }
+        .move-to-right {
+            z-index: 1;
+            animation: moveToRight 800ms ;
+        }
+        .move-to-left {
+            z-index: 1;
+            animation: moveToLeft 800ms ;
+        }
+        @keyframes moveToRight {
+            0% {
+                transform: translate(0,0);
+                visibility: visible;
+            }
+            15% {
+                transform: translate(-1rem,0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(20rem,0);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        @keyframes moveToLeft {
+            0% {
+                transform: translate(0,0);
+                visibility: visible;
+            }
+            15% {
+                transform: translate(1rem,0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-20rem,0);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div id="progress"></div>
+    <div id="content">
+        <form action="test.php">
+            <div class="page active">
+                <div class="row">
+                    <h2>创建你的帐号</h2>
+                    <h3>这是第一步</h3>
+                </div>
+                <div class="row">
+                    <input type="email" placeholder="Email地址" name="user_email" />
+                </div>
+                <div class="row">
+                    <input type="password" placeholder="密码" name="user_passwd" />
+                </div>
+                <div class="row">
+                    <input type="password" placeholder="重复密码"/>
+                </div>
+                <div class="row">
+                    <button class="btn next">Next</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="row">
+                    <h2>填写社交帐号</h2>
+                    <h3>填写你的常用社交网络帐号</h3>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="新浪微博" name="xinlang_weibo"/>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="腾讯微博" name="tx_weibo"/>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="腾讯QQ" name="tx_qq"/>
+                </div>
+                <div class="row">
+                    <button class="btn prev">Previous</button>
+                    <button class="btn next">Next</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="row">
+                    <h2>个人详细信息</h2>
+                    <h3>个人详细信息是保密的,不会被泄漏</h3>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="昵称" name="nick_name"/>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="姓名" name="user_name"/>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="电话号码" name="phone_number"/>
+                </div>
+                <div class="row">
+                    <textarea name="address" id="" cols="30" rows="3" placeholder="家庭住址"></textarea>
+                </div>
+                <div class="row">
+                    <button class="btn prev">Previous</button>
+                    <button class="btn sub" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</main>
+<script>
+    "use strict";
+
+    $('form').on('click', function (e) {
+        var $target = $(e.target);
+        if ($target.hasClass('prev')) {
+
+            $target.parents('.page').removeClass('active');
+            $target.parents('.page').addClass('move-to-left');
+            $target.parents('.page').prev().addClass('active');
+            $target.parents('.page').prev().removeClass('move-to-right');
+            return false;
+
+        } else if ($target.hasClass('next')) {
+            $target.parents('.page').removeClass('active');
+            $target.parents('.page').addClass('move-to-right');
+            $target.parents('.page').next().addClass('active');
+            $target.parents('.page').next().removeClass('move-to-left');
+            return false;
+        }
+    });
+
+</script>
+</body>
+</html>

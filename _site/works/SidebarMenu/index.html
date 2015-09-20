@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务板</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul li {
+            list-style: none;
+        }
+        main {
+            margin-top: 3rem;
+            margin-left: 3rem;
+        }
+        #sidebar-menu {
+            width: 4rem;
+            background-color: #1888C4;
+            display: flex;
+            flex-direction: column;
+            transition: all 250ms ease-out 0s;
+        }
+        #toggle-menu {
+            height: 2.5rem;
+            display: flex;
+            cursor: pointer;
+        }
+        #toggle-menu-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 100%;
+        }
+        #menu-items {
+            width: 100%;
+            background-color: #229BDC;
+            padding: 0 .25rem;
+        }
+        #menu-items > li {
+            height: 3.125rem;
+            /*width: 3.5rem;*/
+            background-image: url("images/sidemenu-sprite.png");
+            background-repeat: no-repeat;
+            cursor: pointer;
+            border-radius: .25rem;
+            margin: .25rem 0;
+        }
+        li.clicked {
+            background-color: white;
+        }
+        #menu-items > li > span:not(#settings) {
+            font-size: .875rem;
+            display: block;
+            width: 3.5rem;
+            height: 100%;
+            margin-left: 4.5rem;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 3.125rem;
+            opacity: 0;
+            color: #ABE2FF;
+        }
+        #menu-items > li:hover > span {
+            color: white!important;
+        }
+        #sidebar-menu.open #menu-items > li > span:not(#settings) {
+            margin-left: 3.5rem;
+            opacity: 1;
+            transition: all 350ms ease-out 0s;
+        }
+        #dashboard {
+            background-position: 11px 18px;
+        }
+        #dashboard:hover {
+            background-position: -320px 18px;
+        }
+        #users {
+            background-position: 11px -30px;
+        }
+        #users:hover {
+            background-position: -320px -30px;
+        }
+        #priority {
+            background-position: 11px -77px;
+        }
+        #collections {
+            background-position: 11px -124px;
+        }
+        #archived {
+            background-position: 11px -171px;
+        }
+        #deleted {
+            background-position: 11px -219px;
+        }
+        #trends {
+            background-position: 11px -268px;;
+        }
+        #tasks {
+            background-position: 11px -315px;
+        }
+        #filters {
+            background-position: 11px -360px;
+        }
+        #stats {
+            background-position: 11px -413px;
+        }
+        li#settings {
+            background-position: 11px -505px;
+            margin-top: 4rem;
+        }
+        .open {
+        }
+        #sidebar-menu.open {
+            width: 13.125rem;
+        }
+        #sidebar-menu.open #toggle-menu {
+            justify-content: flex-end;
+        }
+
+    </style>
+    <script src="js/fashionmenu.js"></script>
+</head>
+<body>
+    <main>
+        <div id="sidebar-menu">
+            <div id="toggle-menu">
+                <div id="toggle-menu-icon">
+                    <img src="images/toggle-list.png" alt=""/>
+                </div>
+            </div>
+            <ul id="menu-items">
+                <li id="dashboard">
+                    <span>仪表盘</span>
+                </li>
+                <li id="users">
+                    <span>用户</span>
+                </li>
+                <li id="priority">
+                    <span>优先级</span>
+                </li>
+                <li id="collections">
+                    <span>收藏</span>
+                </li>
+                <li id="archived">
+                    <span>打包</span>
+                </li>
+                <li id="deleted">
+                    <span>删除</span>
+                </li>
+                <li id="trends">
+                    <span>趋势</span>
+                </li>
+                <li id="tasks">
+                    <span>任务</span>
+                </li>
+                <li id="filters">
+                    <span>筛选</span>
+                </li>
+                <li id="stats">
+                    <span>状态</span>
+                </li>
+                <li id="settings">
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script>
+        new FashionMenu.SidebarMenu();
+    </script>
+</body>
+</html>

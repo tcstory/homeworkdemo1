@@ -1,0 +1,199 @@
+.ui.secondary.menu {
+    margin-bottom: 3rem;
+}
+
+.secondary.menu > .item {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+aside {
+    width: 20rem;
+    margin-left: 2.6rem;
+    border: 1px solid hsl(0, 0%, 93%);
+    border-left: none;
+}
+
+.category {
+    margin-top: 2rem;
+}
+
+.row {
+    margin: .25rem 0;
+}
+
+.class-title {
+    font-weight: bold;
+}
+
+.cart-info {
+    color: hsl(224, 6%, 65%);
+}
+
+.column {
+    display: inline-block;
+    width: 5rem;
+    margin-right: 4rem;
+}
+
+.ui.icon.button {
+    vertical-align: text-top;
+}
+
+.tc-beige {
+    background-color: hsl(42, 35%, 87%) !important;
+}
+
+.tc-gery {
+    background-color: hsl(0, 0%, 60%) !important;
+}
+
+.tc-black {
+    background-color: hsl(0, 0%, 13%) !important;
+}
+
+.tc-orange {
+    background-color: hsl(24, 91%, 66%) !important;
+}
+
+.tc-blue {
+    background-color: hsl(223, 55%, 63%) !important;
+}
+
+.tc-purple {
+    background-color: hsl(266, 90%, 73%) !important;
+}
+
+.tc-brown {
+    background-color: hsl(0, 88%, 67%) !important;
+}
+
+.tc-red {
+    background-color: hsl(0, 88%, 67%) !important;
+}
+
+.tc-green {
+    background-color: hsl(155, 51%, 51%) !important;
+}
+
+.tc-white {
+    background-color: hsl(0, 0%, 100%) !important;
+    border: 1px solid hsl(220, 7%, 92%) !important;
+}
+
+#price-bar {
+    height: .5rem;
+    background-color: hsl(170, 100%, 47%);
+    width: 80%;
+    position: relative;
+}
+
+.slider {
+    width: 1rem;
+    height: 1rem;
+    background-color: hsl(0, 0%, 94%);
+    position: absolute;
+    top: -60%;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border: .5rem solid transparent;
+    border-top: .5rem solid hsl(0, 0%, 94%);
+    position: absolute;
+    top: 100%;
+}
+
+#slider1 {
+    left: 0;
+}
+
+#slider2 {
+    right: 0;
+}
+
+.category:last-child {
+    margin-bottom: 6rem;
+}
+
+.main-page {
+    padding-left: 2rem;
+    border-top: 1px solid hsl(0, 0%, 93%);
+}
+
+.main-page > .text {
+    font-size: .875rem;
+    color: hsl(229, 6%, 39%);
+    margin: 2.5rem 0;
+}
+
+.model > img, .main-page .card, .model {
+    width: 18.75rem;
+    height: 26rem;
+}
+
+.card {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 7rem;
+    cursor: pointer;
+}
+
+.card:hover .product-info {
+    /*transform: translate(0,-160px);*/
+    animation: upward 600ms forwards;
+}
+
+@keyframes upward {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(0, -160px);
+    }
+}
+
+.product-info {
+    padding: 1rem 1.5rem;
+    background-color: #FFFFFF;
+    transition: transform 300ms ;
+}
+.product-basic {
+}
+.product-name {
+    font-weight: bold;
+    color: hsl(225, 10%, 25%);
+}
+.product-price {
+    color: hsl(165, 90%, 67%);
+    font-size: 1.375rem;
+    font-weight: 600;
+    float: right;
+}
+.text {
+    font-size: 0.9375rem;
+    color: hsl(240, 1%, 70%);
+    padding: 0.25rem 0 2.5rem;
+}
+.product-row:nth-of-type(1) {
+    height: 5rem;
+    margin-top: 1rem;
+}
+.product-row {
+    margin-bottom: .5rem;
+}
+.product-row > strong {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.product-colors > button {
+}
+
